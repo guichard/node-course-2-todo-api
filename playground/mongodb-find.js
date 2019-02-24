@@ -24,6 +24,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
   //   console.log('Unable to fetch todos', err);
   // });
 
+// Note: after the "toArray" you have a "Promise" at that point
   db.collection('Users').find({name: 'Jean Val Jean'}).count().then((count) => {
   // db.collection('Users').find({name: 'Jean Val Jean'}).toArray().then((docs) => {
     console.log(`There are ${count} Jean Val Jean users`);
